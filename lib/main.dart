@@ -1,4 +1,4 @@
-import 'package:defest23_checkin/screens/homescreen.dart';
+import 'package:defest23_checkin/screens/splash.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,11 +13,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      theme: ThemeData.dark(
         useMaterial3: true,
+      ).copyWith(
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+        ),
       ),
-      home: HomeScreen(),
+      home: SplashScreen(),
     );
   }
 }
