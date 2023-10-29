@@ -27,7 +27,7 @@ class _SwagScannerState extends State<SwagScanner> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: CustomDrawer(),
+      drawer: CustomDrawer(controller: controller2,),
       appBar: AppBar(),
       body: Container(
         decoration: BoxDecoration(
