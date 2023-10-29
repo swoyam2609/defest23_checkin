@@ -27,7 +27,15 @@ class _CheckinScannerState extends State<CheckinScanner> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: CustomDrawer(controller: controller),
-      appBar: AppBar(),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(60),
+        child: AppBar(
+          title: Image.asset(
+            "lib/assets/logo.png",
+            height: 50,
+          ),
+        ),
+      ),
       body: Container(
         decoration: BoxDecoration(
           color: Colors.black,
