@@ -28,7 +28,7 @@ class _CheckinScannerState extends State<CheckinScanner> {
     return Scaffold(
       drawer: CustomDrawer(controller: controller),
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(60),
+        preferredSize: const Size.fromHeight(60),
         child: AppBar(
           title: Image.asset(
             "lib/assets/logo.png",
@@ -37,7 +37,7 @@ class _CheckinScannerState extends State<CheckinScanner> {
         ),
       ),
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Colors.black,
           image: DecorationImage(
             image: AssetImage("lib/assets/bg.png"),
@@ -51,7 +51,7 @@ class _CheckinScannerState extends State<CheckinScanner> {
               Image.asset(
                 "lib/assets/checkin.png",
               ),
-              Container(
+              SizedBox(
                 width: double.infinity,
                 height: 250,
                 child: MobileScanner(
@@ -70,14 +70,14 @@ class _CheckinScannerState extends State<CheckinScanner> {
               ),
               TextButton.icon(
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Color(0xFF4184F7)),
+                  backgroundColor: MaterialStateProperty.all(const Color(0xFF4184F7)),
                   foregroundColor: MaterialStateProperty.all(Colors.white),
                 ),
                 onPressed: () {
                   controller.start();
                 },
-                icon: Icon(Icons.qr_code),
-                label: Text("Scan"),
+                icon: const Icon(Icons.qr_code),
+                label: const Text("Scan"),
               ),
             ],
           ),

@@ -14,9 +14,9 @@ void popup(int type, String code, BuildContext context) {
                 : Devfestapis.swag(code),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return AlertDialog(
+            return const AlertDialog(
               content: Center(
-                child: Container(
+                child: SizedBox(
                     height: 200,
                     width: 200,
                     child: CircularProgressIndicator()),
@@ -28,7 +28,7 @@ void popup(int type, String code, BuildContext context) {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Lottie.asset('lib/assets/failure.json'),
-                  Text("QR Code is not valid"),
+                  const Text("QR Code is not valid"),
                 ],
               ),
             );
@@ -40,7 +40,7 @@ void popup(int type, String code, BuildContext context) {
                   Lottie.asset('lib/assets/success.json', height: 200),
                   Text(
                     snapshot.data['name'],
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),

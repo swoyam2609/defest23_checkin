@@ -2,7 +2,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
     <application
-        android:label="defest23_checkin"
+        android:label="DevFest23 BBSR"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

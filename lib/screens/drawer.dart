@@ -36,14 +36,14 @@ class CustomDrawer extends StatelessWidget {
                         Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => CheckinScanner()));
+                                builder: (context) => const CheckinScanner()));
                       },
                       style: TextButton.styleFrom(
                         foregroundColor: Colors.white,
                         backgroundColor: Colors.blue,
                       ),
-                      icon: Icon(Icons.check_circle),
-                      label: Text("Checkin"),
+                      icon: const Icon(Icons.check_circle),
+                      label: const Text("Checkin"),
                     ),
                   ),
                 ],
@@ -61,10 +61,10 @@ class CustomDrawer extends StatelessWidget {
                         Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => LunchScanner()));
+                                builder: (context) => const LunchScanner()));
                       },
-                      icon: Icon(Icons.food_bank),
-                      label: Text("Lunch"),
+                      icon: const Icon(Icons.food_bank),
+                      label: const Text("Lunch"),
                       style: TextButton.styleFrom(
                         foregroundColor: Colors.white,
                         backgroundColor: Colors.green,
@@ -86,10 +86,10 @@ class CustomDrawer extends StatelessWidget {
                         Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => SwagScanner()));
+                                builder: (context) => const SwagScanner()));
                       },
-                      icon: Icon(Icons.star),
-                      label: Text("Swags"),
+                      icon: const Icon(Icons.star),
+                      label: const Text("Swags"),
                       style: TextButton.styleFrom(
                         foregroundColor: Colors.white,
                         backgroundColor: Colors.red,

@@ -31,7 +31,7 @@ class _SwagScannerState extends State<SwagScanner> {
         controller: controller2,
       ),
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(60),
+        preferredSize: const Size.fromHeight(60),
         child: AppBar(
           title: Image.asset(
             "lib/assets/logo.png",
@@ -40,7 +40,7 @@ class _SwagScannerState extends State<SwagScanner> {
         ),
       ),
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Colors.black,
           image: DecorationImage(
             image: AssetImage("lib/assets/bg.png"),
@@ -54,7 +54,7 @@ class _SwagScannerState extends State<SwagScanner> {
               Image.asset(
                 "lib/assets/swags.png",
               ),
-              Container(
+              SizedBox(
                 width: double.infinity,
                 height: 250,
                 child: MobileScanner(
@@ -73,14 +73,15 @@ class _SwagScannerState extends State<SwagScanner> {
               ),
               TextButton.icon(
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Color(0xFF4184F7)),
+                  backgroundColor:
+                      MaterialStateProperty.all(const Color(0xFF4184F7)),
                   foregroundColor: MaterialStateProperty.all(Colors.white),
                 ),
                 onPressed: () {
                   controller2.start();
                 },
-                icon: Icon(Icons.qr_code),
-                label: Text("Scan"),
+                icon: const Icon(Icons.qr_code),
+                label: const Text("Scan"),
               ),
             ],
           ),

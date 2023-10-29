@@ -9,7 +9,6 @@ class Devfestapis {
 
     if (response.statusCode == 200) {
       dynamic data = jsonDecode(response.body);
-      print(data);
       return data;
     } else if (response.statusCode == 201) {
       return false;
@@ -24,7 +23,6 @@ class Devfestapis {
 
     if (response.statusCode == 200) {
       dynamic data = jsonDecode(response.body);
-      print(data);
       return data;
     } else if (response.statusCode == 201) {
       return false;
@@ -39,7 +37,6 @@ class Devfestapis {
 
     if (response.statusCode == 200) {
       dynamic data = jsonDecode(response.body);
-      print(data);
       return data;
     } else if (response.statusCode == 201) {
       return false;

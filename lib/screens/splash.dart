@@ -13,7 +13,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     Future.delayed(const Duration(seconds: 2), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => CheckinScanner()));
+          context, MaterialPageRoute(builder: (context) => const CheckinScanner()));
     });
     super.initState();
   }
@@ -25,10 +25,10 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Container(
           height: double.infinity,
           width: double.infinity,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Colors.black,
             image: DecorationImage(
-              image: const AssetImage('lib/assets/bg.png'),
+              image: AssetImage('lib/assets/bg.png'),
               fit: BoxFit.cover,
             ),
           ),
