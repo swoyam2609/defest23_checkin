@@ -1,3 +1,4 @@
+import 'package:defest23_checkin/widgets/qrscanner_change.dart';
 import 'package:defest23_checkin/widgets/qrscanner_checkin.dart';
 import 'package:defest23_checkin/widgets/qrscanner_lunch.dart';
 import 'package:defest23_checkin/widgets/qrscanner_swag.dart';
@@ -44,6 +45,31 @@ class CustomDrawer extends StatelessWidget {
                       ),
                       icon: const Icon(Icons.check_circle),
                       label: const Text("Checkin"),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: TextButton.icon(
+                      onPressed: () {
+                        controller.dispose();
+                        Navigator.pop(context);
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const ChangeQrPage()));
+                      },
+                      style: TextButton.styleFrom(
+                        foregroundColor: Colors.white,
+                        backgroundColor: Colors.yellow[800],
+                      ),
+                      icon: const Icon(Icons.qr_code),
+                      label: const Text("Change QR"),
                     ),
                   ),
                 ],
