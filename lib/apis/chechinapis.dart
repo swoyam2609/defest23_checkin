@@ -4,7 +4,8 @@ import 'package:http/http.dart' as http;
 
 class Devfestapis {
   static Future<dynamic> checkIn(String uniqueId) async {
-    final url = Uri.parse('https://devfest.onrender.com/checkin/$uniqueId');
+    final url =
+        Uri.parse('https://advaita24.swoyam.engineer/checkin?qr=$uniqueId');
     final response = await http.put(url);
 
     if (response.statusCode == 200) {

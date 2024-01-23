@@ -39,7 +39,7 @@ void popup(int type, String code, BuildContext context) {
                 children: [
                   Lottie.asset('lib/assets/success.json', height: 200),
                   Text(
-                    snapshot.data['name'],
+                    snapshot.data['message'],
                     style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
