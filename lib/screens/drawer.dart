@@ -62,63 +62,13 @@ class CustomDrawer extends StatelessWidget {
                         Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const ChangeQrPage()));
-                      },
-                      style: TextButton.styleFrom(
-                        foregroundColor: Colors.white,
-                        backgroundColor: Colors.yellow[800],
-                      ),
-                      icon: const Icon(Icons.qr_code),
-                      label: const Text("Change QR"),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: TextButton.icon(
-                      onPressed: () {
-                        controller.dispose();
-                        Navigator.pop(context);
-                        Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
                                 builder: (context) => const LunchScanner()));
                       },
-                      icon: const Icon(Icons.food_bank),
-                      label: const Text("Lunch"),
+                      icon: const Icon(Icons.airplane_ticket),
+                      label: const Text("Sell Ticket"),
                       style: TextButton.styleFrom(
                         foregroundColor: Colors.white,
                         backgroundColor: Colors.green,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: TextButton.icon(
-                      onPressed: () {
-                        controller.dispose();
-                        Navigator.pop(context);
-                        Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const SwagScanner()));
-                      },
-                      icon: const Icon(Icons.star),
-                      label: const Text("Swags"),
-                      style: TextButton.styleFrom(
-                        foregroundColor: Colors.white,
-                        backgroundColor: Colors.red,
                       ),
                     ),
                   ),

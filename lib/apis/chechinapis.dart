@@ -19,7 +19,7 @@ class Devfestapis {
   }
 
   static Future<dynamic> lunch(String uniqueId) async {
-    final url = Uri.parse('https://devfest.onrender.com/lunch/$uniqueId');
+    final url = Uri.parse('https://advaita24.swoyam.engineer/sell?qr=$uniqueId');
     final response = await http.put(url);
 
     if (response.statusCode == 200) {

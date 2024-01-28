@@ -26,6 +26,9 @@ class _CheckinScannerState extends State<CheckinScanner> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: CustomDrawer(
+        controller: controller,
+      ),
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(60),
         child: AppBar(
