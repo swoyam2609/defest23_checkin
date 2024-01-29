@@ -33,7 +33,7 @@ class Devfestapis {
   }
 
   static Future<dynamic> swag(String uniqueId) async {
-    final url = Uri.parse('https://devfest.onrender.com/swag/$uniqueId');
+    final url = Uri.parse('https://advaita24.swoyam.engineer/checkout?qr=$uniqueId');
     final response = await http.put(url);
 
     if (response.statusCode == 200) {

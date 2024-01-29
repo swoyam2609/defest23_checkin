@@ -88,7 +88,7 @@ class _LunchScannerState extends State<LunchScanner> {
                   ),
                   TextButton.icon(
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(
+                      backgroundColor: MaterialStateProperty.all( const
                           Color.fromARGB(255, 255, 0, 0)),
                       foregroundColor: MaterialStateProperty.all(Colors.white),
                     ),

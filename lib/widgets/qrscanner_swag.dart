@@ -71,17 +71,34 @@ class _SwagScannerState extends State<SwagScanner> {
                   },
                 ),
               ),
-              TextButton.icon(
-                style: ButtonStyle(
-                  backgroundColor:
-                      MaterialStateProperty.all(const Color(0xFF4184F7)),
-                  foregroundColor: MaterialStateProperty.all(Colors.white),
-                ),
-                onPressed: () {
-                  controller2.start();
-                },
-                icon: const Icon(Icons.qr_code),
-                label: const Text("Scan"),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  TextButton.icon(
+                    style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all(const Color(0xFF4184F7)),
+                      foregroundColor: MaterialStateProperty.all(Colors.white),
+                    ),
+                    onPressed: () {
+                      controller2.start();
+                    },
+                    icon: const Icon(Icons.qr_code),
+                    label: const Text("Scan"),
+                  ),
+                  TextButton.icon(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(
+                          const Color.fromARGB(255, 255, 0, 0)),
+                      foregroundColor: MaterialStateProperty.all(Colors.white),
+                    ),
+                    onPressed: () {
+                      controller2.stop();
+                    },
+                    icon: const Icon(Icons.stop),
+                    label: const Text("Stop"),
+                  ),
+                ],
               ),
             ],
           ),
