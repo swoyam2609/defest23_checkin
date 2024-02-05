@@ -78,7 +78,7 @@ class CustomDrawer extends StatelessWidget {
                       },
                       style: TextButton.styleFrom(
                         foregroundColor: Colors.white,
-                        backgroundColor: Colors.blue,
+                        backgroundColor: Colors.green,
                       ),
                       icon: const Row(
                         children: [
@@ -110,7 +110,7 @@ class CustomDrawer extends StatelessWidget {
                       },
                       style: TextButton.styleFrom(
                         foregroundColor: Colors.white,
-                        backgroundColor: Colors.blue,
+                        backgroundColor: Colors.red,
                       ),
                       icon: const Row(
                         children: [
@@ -142,7 +142,7 @@ class CustomDrawer extends StatelessWidget {
                       },
                       style: TextButton.styleFrom(
                         foregroundColor: Colors.white,
-                        backgroundColor: Colors.blue,
+                        backgroundColor: Colors.blueGrey,
                       ),
                       icon: const Row(
                         children: [
@@ -173,7 +173,7 @@ class CustomDrawer extends StatelessWidget {
                       },
                       style: TextButton.styleFrom(
                         foregroundColor: Colors.white,
-                        backgroundColor: Colors.blue,
+                        backgroundColor: Colors.brown,
                       ),
                       icon: const Row(
                         children: [
@@ -204,7 +204,7 @@ class CustomDrawer extends StatelessWidget {
                       },
                       style: TextButton.styleFrom(
                         foregroundColor: Colors.white,
-                        backgroundColor: Colors.blue,
+                        backgroundColor: Colors.cyan[900],
                       ),
                       icon: const Row(
                         children: [
@@ -235,7 +235,7 @@ class CustomDrawer extends StatelessWidget {
                       },
                       style: TextButton.styleFrom(
                         foregroundColor: Colors.white,
-                        backgroundColor: Colors.blue,
+                        backgroundColor: Colors.deepOrange,
                       ),
                       icon: const Row(
                         children: [
@@ -266,7 +266,7 @@ class CustomDrawer extends StatelessWidget {
                       },
                       style: TextButton.styleFrom(
                         foregroundColor: Colors.white,
-                        backgroundColor: Colors.blue,
+                        backgroundColor: Colors.deepPurpleAccent,
                       ),
                       icon: const Row(
                         children: [
@@ -297,7 +297,7 @@ class CustomDrawer extends StatelessWidget {
                       },
                       style: TextButton.styleFrom(
                         foregroundColor: Colors.white,
-                        backgroundColor: Colors.blue,
+                        backgroundColor: Colors.lime[900],
                       ),
                       icon: const Row(
                         children: [
