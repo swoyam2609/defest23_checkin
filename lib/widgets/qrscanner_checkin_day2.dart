@@ -1,18 +1,17 @@
+import 'package:defest23_checkin/screens/drawer.dart';
 import 'package:defest23_checkin/widgets/popup.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 
-import '../screens/drawer.dart';
-
-class LunchScanner extends StatefulWidget {
-  const LunchScanner({super.key});
+class CheckinScannerDay2 extends StatefulWidget {
+  const CheckinScannerDay2({super.key});
 
   @override
-  State<LunchScanner> createState() => _LunchScannerState();
+  State<CheckinScannerDay2> createState() => _CheckinScannerDay2State();
 }
 
-class _LunchScannerState extends State<LunchScanner> {
-  MobileScannerController controller2 = MobileScannerController(
+class _CheckinScannerDay2State extends State<CheckinScannerDay2> {
+  MobileScannerController controller = MobileScannerController(
     detectionSpeed: DetectionSpeed.normal,
     facing: CameraFacing.back,
     torchEnabled: false,
@@ -20,7 +19,7 @@ class _LunchScannerState extends State<LunchScanner> {
 
   @override
   void dispose() {
-    controller2.dispose();
+    controller.dispose();
     super.dispose();
   }
 
@@ -28,7 +27,7 @@ class _LunchScannerState extends State<LunchScanner> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: CustomDrawer(
-        controller: controller2,
+        controller: controller,
       ),
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(60),
@@ -52,20 +51,20 @@ class _LunchScannerState extends State<LunchScanner> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Image.asset(
-                "lib/assets/lunch.png",
+                "lib/assets/checkinday2.png",
               ),
               SizedBox(
                 width: double.infinity,
                 height: 250,
                 child: MobileScanner(
-                  controller: controller2,
+                  controller: controller,
                   onDetect: (capture) {
-                    controller2.stop();
+                    controller.stop();
                     final List<Barcode> barcodes = capture.barcodes;
                     for (final barcode in barcodes) {
                       debugPrint('Barcode found! ${barcode.rawValue}');
                       if (barcode.rawValue != null) {
-                        popup(2, barcode.rawValue!, context);
+                        popup(1, barcode.rawValue!, context);
                       }
                     }
                   },
@@ -81,19 +80,19 @@ class _LunchScannerState extends State<LunchScanner> {
                       foregroundColor: MaterialStateProperty.all(Colors.white),
                     ),
                     onPressed: () {
-                      controller2.start();
+                      controller.start();
                     },
                     icon: const Icon(Icons.qr_code),
                     label: const Text("Scan"),
                   ),
                   TextButton.icon(
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all( const
+                      backgroundColor: MaterialStateProperty.all(
                           Color.fromARGB(255, 255, 0, 0)),
                       foregroundColor: MaterialStateProperty.all(Colors.white),
                     ),
                     onPressed: () {
-                      controller2.stop();
+                      controller.stop();
                     },
                     icon: const Icon(Icons.stop),
                     label: const Text("Stop"),

@@ -1,4 +1,4 @@
-import 'package:defest23_checkin/widgets/qrscanner_checkin.dart';
+import 'package:defest23_checkin/widgets/qrscanner_checkin_day0.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {

@@ -1,5 +1,12 @@
-import 'package:defest23_checkin/widgets/qrscanner_checkin.dart';
-import 'package:defest23_checkin/widgets/qrscanner_lunch.dart';
+import 'package:defest23_checkin/widgets/qrscanner_checkin_day0.dart';
+import 'package:defest23_checkin/widgets/qrscanner_checkin_day1.dart';
+import 'package:defest23_checkin/widgets/qrscanner_checkin_day2.dart';
+import 'package:defest23_checkin/widgets/qrscanner_checkin_day3.dart';
+import 'package:defest23_checkin/widgets/qrscanner_sell_day0.dart';
+import 'package:defest23_checkin/widgets/qrscanner_sell_day1.dart';
+import 'package:defest23_checkin/widgets/qrscanner_sell_day2.dart';
+import 'package:defest23_checkin/widgets/qrscanner_sell_day3.dart';
+import 'package:defest23_checkin/widgets/qrscanner_sellallday.dart';
 import 'package:defest23_checkin/widgets/qrscanner_swag.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
@@ -42,8 +49,14 @@ class CustomDrawer extends StatelessWidget {
                         foregroundColor: Colors.white,
                         backgroundColor: Colors.blue,
                       ),
-                      icon: const Icon(Icons.check_circle),
-                      label: const Text("Checkin"),
+                      icon: const Row(
+                        children: [
+                          Icon(Icons.check_circle),
+                          SizedBox(width: 5),
+                          Icon(Icons.exposure_zero)
+                        ],
+                      ),
+                      label: const Text("Checkin Day 0"),
                     ),
                   ),
                 ],
@@ -61,14 +74,21 @@ class CustomDrawer extends StatelessWidget {
                         Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const LunchScanner()));
+                                builder: (context) =>
+                                    const CheckinScannerDay1()));
                       },
-                      icon: const Icon(Icons.airplane_ticket),
-                      label: const Text("Sell Ticket"),
                       style: TextButton.styleFrom(
                         foregroundColor: Colors.white,
-                        backgroundColor: Colors.green,
+                        backgroundColor: Colors.blue,
                       ),
+                      icon: const Row(
+                        children: [
+                          Icon(Icons.check_circle),
+                          SizedBox(width: 5),
+                          Icon(Icons.one_x_mobiledata)
+                        ],
+                      ),
+                      label: const Text("Checkin Day 1"),
                     ),
                   ),
                 ],
@@ -86,14 +106,208 @@ class CustomDrawer extends StatelessWidget {
                         Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const SwagScanner()));
+                                builder: (context) =>
+                                    const CheckinScannerDay2()));
                       },
-                      icon: const Icon(Icons.exit_to_app),
-                      label: const Text("Checkout"),
                       style: TextButton.styleFrom(
                         foregroundColor: Colors.white,
-                        backgroundColor: Colors.deepOrange,
+                        backgroundColor: Colors.blue,
                       ),
+                      icon: const Row(
+                        children: [
+                          Icon(Icons.check_circle),
+                          SizedBox(width: 5),
+                          Icon(Icons.two_k_rounded)
+                        ],
+                      ),
+                      label: const Text("Checkin Day 2"),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: TextButton.icon(
+                      onPressed: () {
+                        controller.dispose();
+                        Navigator.pop(context);
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const CheckinScannerDay3()));
+                      },
+                      style: TextButton.styleFrom(
+                        foregroundColor: Colors.white,
+                        backgroundColor: Colors.blue,
+                      ),
+                      icon: const Row(
+                        children: [
+                          Icon(Icons.check_circle),
+                          SizedBox(width: 5),
+                          Icon(Icons.three_k_rounded)
+                        ],
+                      ),
+                      label: const Text("Checkin Day 3"),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: TextButton.icon(
+                      onPressed: () {
+                        controller.dispose();
+                        Navigator.pop(context);
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const SellAllDay()));
+                      },
+                      style: TextButton.styleFrom(
+                        foregroundColor: Colors.white,
+                        backgroundColor: Colors.blue,
+                      ),
+                      icon: const Row(
+                        children: [
+                          Icon(Icons.sell_outlined),
+                          SizedBox(width: 5),
+                          Icon(Icons.all_inbox_outlined)
+                        ],
+                      ),
+                      label: const Text("Sell All Day"),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: TextButton.icon(
+                      onPressed: () {
+                        controller.dispose();
+                        Navigator.pop(context);
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const SellDay0()));
+                      },
+                      style: TextButton.styleFrom(
+                        foregroundColor: Colors.white,
+                        backgroundColor: Colors.blue,
+                      ),
+                      icon: const Row(
+                        children: [
+                          Icon(Icons.sell),
+                          SizedBox(width: 5),
+                          Icon(Icons.exposure_zero)
+                        ],
+                      ),
+                      label: const Text("Sell Day 0"),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: TextButton.icon(
+                      onPressed: () {
+                        controller.dispose();
+                        Navigator.pop(context);
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const SellDay1()));
+                      },
+                      style: TextButton.styleFrom(
+                        foregroundColor: Colors.white,
+                        backgroundColor: Colors.blue,
+                      ),
+                      icon: const Row(
+                        children: [
+                          Icon(Icons.sell_outlined),
+                          SizedBox(width: 5),
+                          Icon(Icons.one_k)
+                        ],
+                      ),
+                      label: const Text("Sell Day 1"),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: TextButton.icon(
+                      onPressed: () {
+                        controller.dispose();
+                        Navigator.pop(context);
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const SellDay2()));
+                      },
+                      style: TextButton.styleFrom(
+                        foregroundColor: Colors.white,
+                        backgroundColor: Colors.blue,
+                      ),
+                      icon: const Row(
+                        children: [
+                          Icon(Icons.sell),
+                          SizedBox(width: 5),
+                          Icon(Icons.two_k_rounded)
+                        ],
+                      ),
+                      label: const Text("Sell Day 2"),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: TextButton.icon(
+                      onPressed: () {
+                        controller.dispose();
+                        Navigator.pop(context);
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const SellDay3()));
+                      },
+                      style: TextButton.styleFrom(
+                        foregroundColor: Colors.white,
+                        backgroundColor: Colors.blue,
+                      ),
+                      icon: const Row(
+                        children: [
+                          Icon(Icons.sell_outlined),
+                          SizedBox(width: 5),
+                          Icon(Icons.three_k_rounded)
+                        ],
+                      ),
+                      label: const Text("Sell Day 3"),
                     ),
                   ),
                 ],

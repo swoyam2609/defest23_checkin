@@ -3,14 +3,14 @@ import 'package:defest23_checkin/widgets/popup.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 
-class CheckinScanner extends StatefulWidget {
-  const CheckinScanner({super.key});
+class CheckinScannerDay3 extends StatefulWidget {
+  const CheckinScannerDay3({super.key});
 
   @override
-  State<CheckinScanner> createState() => _CheckinScannerState();
+  State<CheckinScannerDay3> createState() => _CheckinScannerDay3State();
 }
 
-class _CheckinScannerState extends State<CheckinScanner> {
+class _CheckinScannerDay3State extends State<CheckinScannerDay3> {
   MobileScannerController controller = MobileScannerController(
     detectionSpeed: DetectionSpeed.normal,
     facing: CameraFacing.back,
@@ -51,7 +51,7 @@ class _CheckinScannerState extends State<CheckinScanner> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Image.asset(
-                "lib/assets/checkin.png",
+                "lib/assets/checkinday3.png",
               ),
               SizedBox(
                 width: double.infinity,
