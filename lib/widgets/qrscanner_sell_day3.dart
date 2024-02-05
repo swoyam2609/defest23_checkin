@@ -65,7 +65,7 @@ class _SellDay3State extends State<SellDay3> {
                     for (final barcode in barcodes) {
                       debugPrint('Barcode found! ${barcode.rawValue}');
                       if (barcode.rawValue != null) {
-                        popup(2, barcode.rawValue!, context);
+                        popup(9, barcode.rawValue!, context);
                       }
                     }
                   },

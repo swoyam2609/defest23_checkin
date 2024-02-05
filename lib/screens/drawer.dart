@@ -7,7 +7,6 @@ import 'package:defest23_checkin/widgets/qrscanner_sell_day1.dart';
 import 'package:defest23_checkin/widgets/qrscanner_sell_day2.dart';
 import 'package:defest23_checkin/widgets/qrscanner_sell_day3.dart';
 import 'package:defest23_checkin/widgets/qrscanner_sellallday.dart';
-import 'package:defest23_checkin/widgets/qrscanner_swag.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 

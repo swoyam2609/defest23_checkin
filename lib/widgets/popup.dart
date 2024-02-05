@@ -8,10 +8,22 @@ void popup(int type, String code, BuildContext context) {
     builder: (context) {
       return FutureBuilder(
         future: type == 1
-            ? Devfestapis.checkIn(code)
+            ? Devfestapis.checkInDay0(code)
             : type == 2
-                ? Devfestapis.lunch(code)
-                : Devfestapis.swag(code),
+                ? Devfestapis.checkInDay1(code)
+                : type == 3
+                    ? Devfestapis.checkInDay2(code)
+                    : type == 4
+                        ? Devfestapis.checkInDay3(code)
+                        : type == 5
+                            ? Devfestapis.sellAll(code)
+                            : type == 6
+                                ? Devfestapis.sellDay0(code)
+                                : type == 7
+                                    ? Devfestapis.sellDay1(code)
+                                    : type == 8
+                                        ? Devfestapis.sellDay2(code)
+                                        : Devfestapis.sellDay3(code),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const AlertDialog(
