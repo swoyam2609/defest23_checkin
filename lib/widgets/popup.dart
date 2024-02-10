@@ -2,7 +2,14 @@ import 'package:defest23_checkin/apis/chechinapis.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-void popup(int type, String code, BuildContext context) {
+void popup(
+    {required type,
+    required String code,
+    String name = "",
+    String email = "",
+    String phone = "",
+    String comments = "",
+    required BuildContext context}) {
   showDialog(
     context: context,
     builder: (context) {
@@ -16,14 +23,19 @@ void popup(int type, String code, BuildContext context) {
                     : type == 4
                         ? Devfestapis.checkInDay3(code)
                         : type == 5
-                            ? Devfestapis.sellAll(code)
+                            ? Devfestapis.sellAll(
+                                code, name, email, phone, comments)
                             : type == 6
-                                ? Devfestapis.sellDay0(code)
+                                ? Devfestapis.sellDay0(
+                                    code, name, email, phone, comments)
                                 : type == 7
-                                    ? Devfestapis.sellDay1(code)
+                                    ? Devfestapis.sellDay1(
+                                        code, name, email, phone, comments)
                                     : type == 8
-                                        ? Devfestapis.sellDay2(code)
-                                        : Devfestapis.sellDay3(code),
+                                        ? Devfestapis.sellDay2(
+                                            code, name, email, phone, comments)
+                                        : Devfestapis.sellDay3(
+                                            code, name, email, phone, comments),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const AlertDialog(

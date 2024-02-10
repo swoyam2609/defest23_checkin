@@ -1,3 +1,4 @@
+import 'package:defest23_checkin/widgets/pop.dart';
 import 'package:defest23_checkin/widgets/popup.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
@@ -65,7 +66,7 @@ class _SellDay2State extends State<SellDay2> {
                     for (final barcode in barcodes) {
                       debugPrint('Barcode found! ${barcode.rawValue}');
                       if (barcode.rawValue != null) {
-                        popup(8, barcode.rawValue!, context);
+                        pop(8, barcode.rawValue!, context);
                       }
                     }
                   },

@@ -64,7 +64,7 @@ class _CheckinScannerState extends State<CheckinScanner> {
                     for (final barcode in barcodes) {
                       debugPrint('Barcode found! ${barcode.rawValue}');
                       if (barcode.rawValue != null) {
-                        popup(1, barcode.rawValue!, context);
+                        popup(type: 1, code: barcode.rawValue!, context: context);
                       }
                     }
                   },
