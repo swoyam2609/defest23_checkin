@@ -1,4 +1,3 @@
-import 'package:defest23_checkin/screens/drawer.dart';
 import 'package:defest23_checkin/widgets/popup.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
@@ -26,9 +25,6 @@ class _CheckinScannerState extends State<CheckinScanner> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: CustomDrawer(
-        controller: controller,
-      ),
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(60),
         child: AppBar(
@@ -51,7 +47,7 @@ class _CheckinScannerState extends State<CheckinScanner> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Image.asset(
-                "lib/assets/checkinday0.png",
+                "lib/assets/validator.png",
               ),
               SizedBox(
                 width: double.infinity,

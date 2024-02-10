@@ -4,8 +4,8 @@ import 'package:http/http.dart' as http;
 
 class Devfestapis {
   static Future<dynamic> checkInDay0(String uniqueId) async {
-    final url = Uri.parse(
-        'https://advaita24.swoyam.engineer/checkin/day0?qr=$uniqueId');
+    final url =
+        Uri.parse('https://advaita24.swoyam.engineer/verify?qr=$uniqueId');
     final response = await http.put(url);
 
     if (response.statusCode == 200) {
