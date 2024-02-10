@@ -1,5 +1,4 @@
 import 'package:defest23_checkin/widgets/pop.dart';
-import 'package:defest23_checkin/widgets/popup.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 
